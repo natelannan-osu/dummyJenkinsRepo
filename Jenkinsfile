@@ -8,7 +8,7 @@ pipeline {
 		}
 		stage('Testing'){
 			steps {
-			      sh(script: 'python -m pytest --junitxml results.xml test)
+			      sh(script: 'python -m pytest --junitxml results.xml tests.py)
 			      }
 		}
 	}

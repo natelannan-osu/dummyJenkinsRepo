@@ -1,7 +1,12 @@
-/* Requires the Docker Pipeline plugin */
-node{
-        stage('Hello') {
-            echo 'Hello World'
-        }
+pipeline {
+	 agent any
+	 stages {
+	 	stage('Hello;){
+			steps {
+			      echo 'Hello World'
+			      }
+		}
+	}
 }
+
 

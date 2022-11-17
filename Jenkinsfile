@@ -8,7 +8,7 @@ pipeline {
 		}
 		stage('Testing'){
 			steps {
-			      bat(script: 'python -m pytest --junitxml results.xml tests.py')
+			      sh(script: 'python -m pytest --junitxml results.xml tests.py')
 			      }
 		}
 	}

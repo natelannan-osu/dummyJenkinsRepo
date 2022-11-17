@@ -8,7 +8,7 @@ pipeline {
 		}
 		stage('Testing'){
 			steps {
-			      sh(script: 'py.test --junitxml results.xml tests.py')
+			      sh(script: '/home/amerigo/anaconda3/bin/pytest --junitxml results.xml tests.py')
 			      }
 		}
 	}

@@ -3,9 +3,8 @@ pipeline {
 	 stages {
 	 	stage('setup'){
 			steps {
-			      sh(script: 'pip3 --install --upgrade pip')
-			      sh('pip3 install pytest')
-			      sh('python -m pytest test.py')
+			      sh(script: 'pip3 install pytest')
+			      sh(script: 'python -m pytest test.py')
 			      }
 		}
 		stage('Testing'){

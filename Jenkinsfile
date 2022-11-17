@@ -1,9 +1,11 @@
 pipeline {
 	 agent any
 	 stages {
-	 	stage('Hello'){
+	 	stage('setup'){
 			steps {
-			      echo 'Hello World'
+			      sh(script: 'pip3 --install --upgrade pip')
+			      sh('pip3 install pytest')
+			      sh('python -m pytest test.py')
 			      }
 		}
 		stage('Testing'){

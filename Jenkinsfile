@@ -4,7 +4,6 @@ pipeline {
 	 	stage('setup'){
 			steps {
 			      sh(script: 'pip3 install pytest')
-			      sh(script: 'python -m pytest test.py')
 			      }
 		}
 		stage('Testing'){
